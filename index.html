@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambiente Virtual - Conscientização Sobre o Aquecimento Global</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navegação -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-snowflake"></i>
+                        <span>Ambiente Virtual</span>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                            <i class="fas fa-snowflake" id="themeIcon"></i>
+                        </button>
+                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#inicio" class="nav-link">Início</a></li>
+                        <li><a href="#problema" class="nav-link">O Problema</a></li>
+                        <li><a href="#impactos" class="nav-link">Impactos</a></li>
+                        <li><a href="#pinguins" class="nav-link">Pinguins Famosos</a></li>
+                        <li><a href="#ongs" class="nav-link">ONGs / Doações</a></li>
+                        <li><a href="#ajudar" class="nav-link">Como Ajudar</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Conscientização Sobre o Aquecimento Global</h1>
+            <p class="hero-text">Um ambiente virtual dedicado à educação e conscientização sobre os impactos do aquecimento global, especialmente na vida dos pinguins e no nosso planeta.</p>
+            <a href="#problema" class="btn btn-primary">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- Termômetro Fixo -->
+    <div class="fixed-thermometer" id="fixedThermometer">
+        <div class="thermometer-bar-fixed">
+            <div class="thermometer-fill-fixed" id="thermometerFillFixed"></div>
+        </div>
+        <div class="thermometer-icon-fixed" id="thermometerIconFixed">
+            <i class="fas fa-snowflake"></i>
+        </div>
+    </div>
+
+    <!-- Efeito de Neve (apenas no modo gelo) -->
+    <div class="snow-container" id="snowContainer"></div>
+
+    <!-- Mini Game -->
+    <section class="game-section" id="gameSection">
+        <div class="container">
+            <h2 class="section-title">Mini Game: Salve os Cubos de Gelo!</h2>
+            <div class="game-container" id="gameContainer">
+                <div class="game-info">
+                    <div class="game-score">Pontos: <span id="gameScore">0</span></div>
+                    <div class="game-timer">Tempo: <span id="gameTimer">30</span>s</div>
+                </div>
+                <div class="game-area" id="gameArea">
+                    <div class="penguin-character" id="penguinCharacter">🐧</div>
+                </div>
+                <button class="btn btn-primary" id="startGameBtn">Iniciar Jogo</button>
+                <div class="game-result" id="gameResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O Problema -->
+    <section class="problem-section" id="problema">
+        <div class="problem-card">
+            <div class="problem-image"></div>
+            <div class="problem-overlay"></div>
+            <div class="problem-content">
+                <h2 class="section-title">O Problema</h2>
+                <div class="problem-text">
+                    <p>O aquecimento global é um dos maiores desafios da humanidade. Causado principalmente pela emissão excessiva de gases de efeito estufa, como o dióxido de carbono, resultante da queima de combustíveis fósseis, desmatamento e atividades industriais.</p>
+                    
+                    <h3>Impactos nos Ecossistemas Polares</h3>
+                    <p>O aumento da temperatura global está derretendo as calotas polares, reduzindo o habitat natural dos pinguins e outras espécies polares. O gelo marinho, essencial para a alimentação e reprodução desses animais, está desaparecendo em ritmo alarmante.</p>
+                    
+                    <h3>Impactos nos Seres Humanos</h3>
+                    <p>O aquecimento global afeta diretamente a vida humana de várias formas:</p>
+                    <ul>
+                        <li><strong>Aumento do nível do mar:</strong> O derretimento das calotas polares eleva o nível dos oceanos, ameaçando cidades costeiras e ilhas.</li>
+                        <li><strong>Eventos climáticos extremos:</strong> Furacões, secas, enchentes e ondas de calor se tornam mais frequentes e intensos.</li>
+                        <li><strong>Falta de água:</strong> Mudanças nos padrões de chuva e derretimento de geleiras afetam o abastecimento de água potável.</li>
+                        <li><strong>Prejuízos econômicos:</strong> Agricultura, pesca e turismo são severamente impactados, gerando perdas bilionárias.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Cards Informativos -->
+    <section class="info-cards-section" id="infoCards">
+        <div class="container">
+            <h2 class="section-title">Informações Importantes</h2>
+            <div class="info-cards-grid">
+                <div class="info-card">
+                    <div class="info-card-image info-card-1"></div>
+                    <div class="info-card-overlay"></div>
+                    <div class="info-card-content">
+                        <i class="fas fa-info-circle info-card-icon"></i>
+                        <h3>Curiosidades sobre Pinguins</h3>
+                        <p>Os pinguins são aves marinhas que não voam, adaptadas para viver na água. Existem 18 espécies conhecidas, e todas vivem no hemisfério sul. Eles podem mergulhar até 500 metros de profundidade e permanecer submersos por até 20 minutos.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-card-image info-card-2"></div>
+                    <div class="info-card-overlay"></div>
+                    <div class="info-card-content">
+                        <i class="fas fa-igloo info-card-icon"></i>
+                        <h3>Ecossistema Polar</h3>
+                        <p>Os ecossistemas polares são extremamente sensíveis às mudanças climáticas. O gelo marinho serve como plataforma de caça, local de reprodução e proteção contra predadores para muitas espécies, incluindo pinguins, focas e ursos polares.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-card-image info-card-3"></div>
+                    <div class="info-card-overlay"></div>
+                    <div class="info-card-content">
+                        <i class="fas fa-thermometer-half info-card-icon"></i>
+                        <h3>Aquecimento Global e Pinguins</h3>
+                        <p>O aumento da temperatura está reduzindo o gelo marinho, forçando os pinguins a nadar distâncias maiores para encontrar comida. Muitas colônias estão diminuindo drasticamente, com algumas espécies enfrentando risco crítico de extinção.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-card-image info-card-4"></div>
+                    <div class="info-card-overlay"></div>
+                    <div class="info-card-content">
+                        <i class="fas fa-users info-card-icon"></i>
+                        <h3>Impacto nos Humanos</h3>
+                        <p>As mudanças climáticas afetam diretamente a vida humana: aumento do nível do mar ameaça cidades costeiras, ondas de calor intensas causam mortes, enchentes e tempestades mais fortes destroem infraestrutura, e o derretimento de geleiras compromete o abastecimento de água de bilhões de pessoas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Impactos -->
+    <section class="impacts-section" id="impactos">
+        <div class="container">
+            <h2 class="section-title">Impactos do Aquecimento Global</h2>
+            <div class="impacts-grid">
+                <div class="impact-card">
+                    <div class="impact-image impact-image-1"></div>
+                    <div class="impact-overlay"></div>
+                    <div class="impact-content">
+                        <i class="fas fa-paw impact-icon"></i>
+                        <h3>Impacto na Fauna Polar</h3>
+                        <p>Pinguins, ursos polares, focas e outras espécies enfrentam a perda de habitat, dificuldades para encontrar alimento e alterações em seus ciclos reprodutivos. Muitas espécies estão em risco de extinção.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-image impact-image-2"></div>
+                    <div class="impact-overlay"></div>
+                    <div class="impact-content">
+                        <i class="fas fa-mountain impact-icon"></i>
+                        <h3>Derretimento das Calotas</h3>
+                        <p>As calotas polares estão derretendo em velocidade recorde. Isso não apenas eleva o nível do mar, mas também altera as correntes oceânicas e o clima global, criando um ciclo vicioso de aquecimento.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-image impact-image-3"></div>
+                    <div class="impact-overlay"></div>
+                    <div class="impact-content">
+                        <i class="fas fa-users impact-icon"></i>
+                        <h3>Impactos Diretos nos Humanos</h3>
+                        <p>O aquecimento global causa aumento do nível do mar, ondas de calor mais intensas, enchentes e tempestades mais fortes, derretimento de geleiras afetando abastecimento de água, riscos à agricultura e alimentação, e perda de biodiversidade que sustenta ecossistemas essenciais para a vida humana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Pinguins Famosos -->
+    <section class="penguins-section" id="pinguins">
+        <div class="container">
+            <h2 class="section-title">Pinguins Famosos</h2>
+            <div class="penguins-grid">
+                <div class="penguin-card">
+                    <img src="pingu.jpg" alt="Pingu" class="penguin-img pingu-img">
+                    <div class="penguin-content">
+                        <h3>Pingu</h3>
+                        <p>O adorável personagem principal do programa infantil suíço, conhecido por suas aventuras na Antártida e seu característico "Noot Noot!".</p>
+                    </div>
+                </div>
+                
+                <div class="penguin-card">
+                    <img src="skipper.jpeg" alt="Skipper" class="penguin-img">
+                    <div class="penguin-content">
+                        <h3>Skipper</h3>
+                        <p>O líder corajoso e estrategista dos Pinguins de Madagascar, sempre pronto para uma missão perigosa.</p>
+                    </div>
+                </div>
+                
+                <div class="penguin-card">
+                    <img src="kowalski.jpg" alt="Kowalski" class="penguin-img kowalski-img">
+                    <div class="penguin-content">
+                        <h3>Kowalski</h3>
+                        <p>O gênio científico da equipe, responsável por análises e invenções que salvam o dia.</p>
+                    </div>
+                </div>
+                
+                <div class="penguin-card">
+                    <img src="rico.jpg" alt="Rico" class="penguin-img">
+                    <div class="penguin-content">
+                        <h3>Rico</h3>
+                        <p>O especialista em explosivos e armas, sempre preparado para qualquer situação extrema.</p>
+                    </div>
+                </div>
+                
+                <div class="penguin-card">
+                    <img src="private.jpg" alt="Private" class="penguin-img">
+                    <div class="penguin-content">
+                        <h3>Private</h3>
+                        <p>O mais novo e entusiasta do grupo, sempre disposto a ajudar e aprender com seus companheiros.</p>
+                    </div>
+                </div>
+                
+                <div class="penguin-card">
+                    <img src="wheezy.jpg" alt="Wheezy" class="penguin-img">
+                    <div class="penguin-content">
+                        <h3>Wheezy</h3>
+                        <p>O pinguim cantor de Toy Story 2, conhecido por sua voz única e personalidade carismática.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: ONGs e Doações -->
+    <section class="ngos-section" id="ongs">
+        <div class="container">
+            <h2 class="section-title">ONGs e Doações</h2>
+            <p class="section-subtitle">Apoie organizações que trabalham para proteger nosso planeta e combater o aquecimento global</p>
+            <div class="ngos-grid">
+                <div class="ngo-card">
+                    <div class="ngo-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>WWF – Fundo Mundial para a Natureza</h3>
+                    <p>Organização internacional focada na conservação da natureza, com programas específicos para proteger espécies polares ameaçadas e combater as mudanças climáticas.</p>
+                    <a href="https://www.wwf.org" target="_blank" rel="noopener noreferrer" class="btn btn-donate">
+                        <i class="fas fa-heart"></i> Doar
+                    </a>
+                </div>
+                
+                <div class="ngo-card">
+                    <div class="ngo-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Greenpeace</h3>
+                    <p>Organização global que luta pela preservação do meio ambiente, incluindo campanhas específicas para proteger os polos e combater as mudanças climáticas.</p>
+                    <a href="https://www.greenpeace.org" target="_blank" rel="noopener noreferrer" class="btn btn-donate">
+                        <i class="fas fa-heart"></i> Doar
+                    </a>
+                </div>
+                
+                <div class="ngo-card">
+                    <div class="ngo-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Ocean Conservancy</h3>
+                    <p>Organização dedicada à proteção dos oceanos e vida marinha, trabalhando para combater a poluição, proteger habitats marinhos e enfrentar os desafios das mudanças climáticas nos oceanos.</p>
+                    <a href="https://oceanconservancy.org" target="_blank" rel="noopener noreferrer" class="btn btn-donate">
+                        <i class="fas fa-heart"></i> Doar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Como Ajudar -->
+    <section class="help-section" id="ajudar">
+        <div class="container">
+            <h2 class="section-title">Como Ajudar</h2>
+            <div class="help-content">
+                <div class="help-grid">
+                    <div class="help-item">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Reciclagem</h3>
+                        <p>Separe corretamente o lixo reciclável e reduza o consumo de produtos descartáveis. A reciclagem reduz a quantidade de resíduos em aterros e diminui a necessidade de produção de novos materiais.</p>
+                    </div>
+                    
+                    <div class="help-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Economia de Energia</h3>
+                        <p>Use lâmpadas LED, desligue aparelhos quando não estiver usando, aproveite a luz natural e prefira eletrodomésticos com selo de eficiência energética.</p>
+                    </div>
+                    
+                    <div class="help-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Consumo Consciente</h3>
+                        <p>Compre apenas o necessário, prefira produtos locais e sustentáveis, evite embalagens excessivas e escolha empresas com práticas ambientais responsáveis.</p>
+                    </div>
+                    
+                    <div class="help-item">
+                        <i class="fas fa-car"></i>
+                        <h3>Redução de Combustíveis Fósseis</h3>
+                        <p>Use transporte público, bicicleta ou caminhe quando possível. Se precisar de carro, considere veículos elétricos ou híbridos. Reduza viagens aéreas desnecessárias.</p>
+                    </div>
+                    
+                    <div class="help-item">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Compartilhamento de Informação</h3>
+                        <p>Eduque-se sobre questões ambientais e compartilhe conhecimento com familiares e amigos. Participe de campanhas e movimentos pela sustentabilidade.</p>
+                    </div>
+                    
+                    <div class="help-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Educação Ambiental</h3>
+                        <p>Participe de workshops, palestras e eventos sobre meio ambiente. Ensine crianças sobre a importância da preservação e sustentabilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ambiente Virtual</h3>
+                    <p>Conscientização Sobre o Aquecimento Global</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Redes Sociais dos Participantes</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/xlucasx.pds/" aria-label="Instagram Lucas" target="_blank" rel="noopener noreferrer" title="Lucas - Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/gibrazxw_/" aria-label="Instagram Participante 2" target="_blank" rel="noopener noreferrer" title="Participante 2 - Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/amarie_dx/" aria-label="Instagram Participante 3" target="_blank" rel="noopener noreferrer" title="Participante 3 - Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/gferre.ira/" aria-label="Instagram Participante 4" target="_blank" rel="noopener noreferrer" title="Participante 4 - Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucas-pinheiro-3b3074356" aria-label="LinkedIn Lucas" target="_blank" rel="noopener noreferrer" title="Lucas - LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Email: <a href="mailto:lucas.souza.147770@a.fecaf.com.br" style="color: var(--color-accent);">lucas.souza.147770@a.fecaf.com.br</a></p>
+                    <p>Projeto Educacional</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ambiente Virtual - Conscientização Sobre o Aquecimento Global. Todos os direitos reservados.</p>
+                <p>Projeto desenvolvido para fins educacionais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
